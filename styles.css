@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: black;
+}
+
+#container {
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  grid-template-columns: 450px 450px;
+  grid-template-rows: 149px 149px 149px;
+  height: 100vh;
+}
+
+#items {
+  grid-row: 3/4;
+}
+
+#head {
+  font-weight: 1000;
+  font-size: 18px;
+  font-family: Roboto;
+}
+
+#para {
+  font-family: Georgia, monospace;
+  font-size: 17px;
+  font-weight: 800;
+  font-family: Roboto;
+}
+#items {
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+#head,
+#para,
+#items {
+  display: flex;
+  align-items: center;
+  background: blueviolet;
+  height: 100%;
+  padding: 0px 20px;
+}
+
+#overlay {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+
+  z-index: 2;
+  background: rgba(172, 23, 206, 0.5);
+}
+img {
+  height: 447px;
+}
+
+#image {
+  position: relative;
+  grid-column: 2/3;
+  grid-row: 1/4;
+  background-size: cover;
+  z-index: -1;
+  width: 541px;
+}
+
+.inside {
+  padding: 0px 10px;
+}
+
+@media (max-width: 400px) {
+  #container {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 320px;
+    grid-template-rows: 300px 145px 145px 145px;
+    height: 100vh;
+  }
+  img {
+    height: 300px;
+    width: 320px;
+    background-size: cover;
+    background-position: center;
+  }
+  #image {
+    position: relative;
+    background-size: cover;
+    z-index: -1;
+    width: 320px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  #head {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 17px;
+  }
+  #para {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    font-size: 15px;
+  }
+  #items {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    font-size: 15px;
+  }
+}
